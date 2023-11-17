@@ -2,8 +2,8 @@
     <div class="ProjectComp" v-if="project" >
         <h2> 프로젝트 작품명 : {{ project.title }}</h2>
         <section class="mainimg">
-            <a :href="`${project.Detail[1].content[0]}`">
-                <img :src="`/assets/common/EasyNetworks/${project.main_Image}`" alt="">
+            <a :href="`${project.Detail[1].content[0]}`" target="_blank">
+                <img :src="`/assets/common/EasyNetworks/${project.main_Image}`"  alt="">
             </a>
         </section>
         <section 
@@ -97,7 +97,7 @@
             </div>
             <div class="detail_content">
                 <img src="../../public/assets/common/EasyNetworks/Detail.png" alt="">
-                <p>Domain : <a :href="`${project.Detail[1].content[0]}`">{{project.Detail[1].content[0]}}</a> </p>
+                <p>Domain : <a :href="`${project.Detail[1].content[0]}`" target="_blank">{{project.Detail[1].content[0]}}</a> </p>
                 <p>Category :{{project.Detail[1].content[1]}}</p>
                 <p>Period :{{project.Detail[1].content[2]}}</p>
                 <p>Classification :{{project.Detail[1].content[3]}}</p>
