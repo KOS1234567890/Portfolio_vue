@@ -220,6 +220,7 @@ export default {
         background-color: #303030;
         padding: 10rem ;
         margin-top: 3rem;
+        font-size: 1.5rem;
         .SkillGraph_img{
             display: flex;
             justify-content: center;

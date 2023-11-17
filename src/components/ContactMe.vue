@@ -85,7 +85,7 @@ export default {
                 figcaption{
                     margin-top: 3rem ;
                     text-align: center;
-                    font-size: 2.875rem;
+                    font-size: 1.5rem;
                     p{
                         color: #ffffff;
                         span{

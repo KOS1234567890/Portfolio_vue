@@ -77,9 +77,10 @@ export default {
         z-index: 10000;
         background-color:#282828a4;
         .header__inner{
+            margin: 0 13rem;
             gap: 10rem;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             .header__logo{
                 img{
                     width: 50%;

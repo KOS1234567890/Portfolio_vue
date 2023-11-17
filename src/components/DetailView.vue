@@ -2,7 +2,9 @@
     <div class="ProjectComp" v-if="project" >
         <h2> 프로젝트 작품명 : {{ project.title }}</h2>
         <section class="mainimg">
-            <img :src="`/assets/common/EasyNetworks/${project.main_Image}`" alt="">
+            <a :href="`${project.Detail[1].content[0]}`">
+                <img :src="`/assets/common/EasyNetworks/${project.main_Image}`" alt="">
+            </a>
         </section>
         <section 
             id="Choice" 

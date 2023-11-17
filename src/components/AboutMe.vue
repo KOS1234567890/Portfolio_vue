@@ -6,26 +6,26 @@
             <p class="Aboutmep">프론트엔드에게 필요한 프레임워크를 학습하고 평소 쉴땐 개인블로그를 개발합니다. 그리고 보통 등산과 사진을 촬영하면서 휴식을 즐깁니다.</p>
         </div>
         
-        <ul>
-            <li>
+        <ul class="About_ul">
+            <li class="About_li">
                 <img src="../../public/assets/icon/web_trend.png" alt="">
-                <p>웹 트렌드</p>
+                <p class="About_p">웹 트렌드</p>
             </li>
-            <li>
+            <li class="About_li">
                 <img src="../../public/assets/icon/mountain.png" alt="">
-                <p>등산</p>
+                <p class="About_p">등산</p>
             </li>
-            <li>
+            <li class="About_li">
                 <img src="../../public/assets/icon/photo.png" alt="">
-                <p>사진 촬영</p>
+                <p class="About_p">사진 촬영</p>
             </li>
-            <li>
+            <li class="About_li">
                 <img src="../../public/assets/icon/Study.png" alt="">
-                <p>학습</p>
+                <p class="About_p">학습</p>
             </li>
-            <li>
-                <img src="../../public/assets/icon/blog.png" alt="">
-                <p>블로그</p>
+            <li class="About_li">
+                <img src="../../public/assets/icon/Sing.png" alt="">
+                <p class="About_p">노래 듣기</p>
             </li>
         </ul>
     </section>
@@ -58,6 +58,7 @@ export default {
 }
 </script>
 <style lang="scss">
+
 .AboutMeContents.show{
     opacity: 1;
     transform: translateY(0%);
@@ -76,22 +77,30 @@ export default {
         }
         .Aboutmep{
             margin-top: 5rem ;
-            font-size: 1.875rem ;
+            font-size: 1.5rem ;
             color: #ffffff;
         }
     }
-    ul{
+    .About_ul{
         margin: 8rem 0;
         display: flex;
         justify-content: space-between;
-        li{
+        .About_li{
             text-align: center;
             list-style: none;
             img{margin-bottom: 1rem;}
-            p{color: white;}
+            .About_p{
+                color: white;
+                opacity: 0;
+                transition: 1s;
+            }
+            
+        }
+        .About_li:hover .About_p{
+            opacity: 2;
         }
     }
-}
+}   
 @media (max-width:1024px){
 
     .AboutMeContents{
@@ -106,14 +115,13 @@ export default {
                 font-size: 1rem ;
             }
         }
-        ul{
+        .About_ul{
             margin: 5rem 0;
-            li{
+            .About_li{
                 img{
                     width: 50%;
                     margin-bottom: 1rem;
                 }
-                p{}
             }
         }
     }
@@ -126,18 +134,15 @@ export default {
                 span{}
             }
             .Aboutmep{
-                margin-top: 3rem ;
                 font-size: .8rem ;
             }
         }
-        ul{
-            margin: 5rem 0;
-            li{
+        .About_ul{
+            .About_li{
                 img{
                     width: 80%;
-                    margin-bottom: 1rem;
                 }
-                p{font-size: .8rem;}
+                .About_p{font-size: .8rem;}
             }
         }
     }
