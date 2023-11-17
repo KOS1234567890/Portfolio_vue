@@ -136,6 +136,7 @@ export default {
     .header{
         #header{
             .header__inner{
+                margin:0 5rem;
                 gap: 0rem;
                 .header__logo{
                     img{
