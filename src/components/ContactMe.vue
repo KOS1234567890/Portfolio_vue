@@ -14,11 +14,11 @@
                    <a>010-5878-8184</a>
                 </figcaption>
             </figure>
-            <figure>
+            <figure class="Email_fig">
                 <div class="Email">
                     <img src="../../public/assets/icon/Email.svg" alt="">
                 </div>
-                <figcaption>
+                <figcaption class="Email_figcaption">
                    <p><span>EMAIL)</span></p>
                    <p>fistar02@gmail.com</p>
                 </figcaption>
@@ -34,9 +34,27 @@
                 </figcaption>
             </figure>
         </div>
+        <div class="form_Email">
+            <h2>E-mail </h2>
+            <form ref="form" @submit.prevent="sendRequestEmail">
+                <p>
+                    <input type="text" name="form_name" placeholder="name" width="400px">
+                </p>
+                <p>
+                    <input type="text" name="form_title" placeholder="title" width="400px">
+                </p>
+                <p>
+                    <textarea name="form_content" placeholder="content" width="400px"></textarea>
+                </p>
+                <p>
+                    <input @click="sendRequestEmail" type="submit" value="전송" class="send_mail">
+                </p>
+            </form>
+        </div>
     </section>
 </template>
 <script>
+import emailjs from 'emailjs-com';
 export default {
     name:'ContactMe',
     data(){
@@ -59,7 +77,17 @@ export default {
             }
 
             this.lastScrollPosition = scrollPosition;
-        }
+        },
+        sendRequestEmail() {
+            console.log(process.env.VUE_APP_SERVICE_ID);
+            emailjs.sendForm(process.env.VUE_APP_SERVICE_ID, process.env.VUE_APP_TEMPLATE_ID,  this.$refs.form, process.env.VUE_APP_PUBLIC_KEY)
+                .then((res) => {
+                    console.log(res)
+                    alert('전송 완료 되었습니다!')
+                }, (error) => {
+                    console.log(error)
+                })
+            },
     }
 }
 </script>
@@ -126,9 +154,12 @@ export default {
                         display: block;
                     }
                 }
-                img{
-                    transition: 1s;
-                    position: relative;
+                div{
+                    img{
+                        width: 100%;
+                        transition: 1s;
+                        position: relative;
+                    }
                 }
                 .Tel_p{
                     position: absolute;
@@ -152,11 +183,6 @@ export default {
                         text-decoration: none;
                     }
                 }
-                .Email{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
                 .QRcode{
                     display: flex;
                     align-items: center;
@@ -172,6 +198,63 @@ export default {
                     }
                     .rotate_kakao{
                         display: block;
+                    }
+                }
+            }
+           
+        }
+        .form_Email{
+            display: block;
+            background-color: #303030;
+            padding: 5rem 0;
+            h2{
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+            }
+            form{
+
+                p{
+                    display: flex;
+                    gap: 5rem;
+                    justify-content: center;
+                    label{
+                        color: #ffffff;
+                    }
+                    input{
+                        padding: 1rem 0;
+                        color: #ffffff;
+                        font-size: 1.5rem;
+                        width:30%;
+                        margin-bottom: 1rem;
+                        background-color: #4dc0c800;
+                        border-radius: 3rem;
+                        border: 1px solid #4DC0C8;
+                        text-align: center;
+                        
+                    }
+                    textarea{
+                        color: white;
+                        background-color: #4dc0c800;
+                        border: 1px solid #4DC0C8;
+                        text-align: center;
+                        border-radius: 3rem;
+                        font-size: 1.5rem;
+                        width: 80%;
+                        height: 10rem;
+                    }
+                    .send_mail{
+                        margin-top: 1rem;
+                        padding: 1rem 1rem;
+                        border-radius: 3rem;
+                        text-align: center;
+                        background-color: #4dc0c877;
+                        transition: 1s;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    .send_mail:hover{
+                        background-color: #4dc0c8;
                     }
                 }
             }
