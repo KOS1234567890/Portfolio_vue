@@ -57,8 +57,12 @@
         </div>
         <div class = "border_skill">
             <div class="SkillGraph_img">
-                <img src="../../public/assets/common/Skill_Graph1.png" alt="">
-                <img class="SkillGraph_img2" src="../../public/assets/common/Skill_Graph2.png" alt="">
+                <div id="chart">
+                    <apexchart type="radar" width="400" height="450" :options="chartOptions" :series="series"></apexchart>
+                </div>
+                <div id="chart">
+                    <apexchart type="radar" width="400" height="450" :options="chartOptions1" :series="series1"></apexchart>
+                </div>
             </div>
             <div class="SkillGraph_ex">
                 <ul>
@@ -129,11 +133,47 @@
     </section>
 </template>
 <script>
+import VueApexCharts from "vue3-apexcharts";
 export default {
-    
+    el: '#app',
+    components: {
+        apexchart: VueApexCharts,
+    },
   name: 'MySkill',
   data() {
     return {
+    series: [{
+        name: 'Series 1',
+        data: [90, 90, 80, 80, 90, 60],
+        }],
+        chartOptions: {
+            chart: {
+                height: 550,
+                type: 'radar',
+            },
+            title: {
+                text: 'Skill Graph1'
+            },
+            xaxis: {
+                categories: ['HTML', 'CSS', 'Javascript', 'Figma', 'SASS', 'Node.js']
+            }
+        },
+    series1: [{
+        name: 'Series 2',
+        data: [80, 60, 60, 80, 80, 100],
+        }],
+        chartOptions1: {
+        chart: {
+            height: 550,
+            type: 'radar',
+        },
+        title: {
+            text: 'Skill Graph2'
+        },
+        xaxis: {
+            categories: ['React.js', 'Next.js', 'Vue.js', 'Github', 'MySQL', 'Vercel']
+        }
+        },
       DATA_COUNT: 7,
       totalMinwon: 100,
       showElement:false,
@@ -230,7 +270,7 @@ export default {
         font-size: 1.5rem;
         .SkillGraph_img{
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             gap: 5rem;
             img{
                 max-width: 50%;
