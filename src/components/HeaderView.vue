@@ -1,29 +1,15 @@
 <template lang="">
-    <header id="header" role="banner">
-        <div class="header__inner">
-            <a href="/" class="header__logo">
-                <img alt="PKstar" src="../../public/assets/common/PKstarlogo.png">
-            </a>
-            <nav class="header_menu1" role="navigation" aria-label="메인 메뉴">
-                <ul class="header_menu1ul">
-                    <li class="header_menu1li" v-for="(nav, key) in headerNav" :key="key">
-                        <a class="header_menu1a" :href="nav.url" @click="click_C(`${nav.tilte}`)">{{ nav.title }}</a>
-                    </li> 
-                </ul>
-            </nav>
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu1">
-                    <li class="menuli" v-for="(nav, key) in headerNav" :key="key">
-                        <a :href="nav.url" @click="click_C(`${nav.tilte}`)">{{ nav.title }}</a>
-                    </li> 
-                </ul>
-            </div>
-        </div>
-    </header>
+    <div class="floating-menu">
+        <input type="checkbox">
+        <span class="plus-icon">
+            <span class="fa fa-plus" aria-hidden="true">+</span>
+        </span>
+        <ul class="floating-nav">
+            <li class="header_menu1li" v-for="(nav, key) in headerNav" :key="key">
+                    <a aria-hidden="true" class="header_menu1a" :href="nav.url" @click="click_C(`${nav.tilte}`)">{{ nav.class }}</a>
+            </li> 
+        </ul>
+    </div>
 </template>
 <script>
 export default {
@@ -31,26 +17,32 @@ export default {
         return{
             headerNav : [
                 {
+                    class:"Ch",
                     title: "Choice",
                     url: "#Choice",
                 },
                 {
+                    class:"Tr",
                     title: "Trouble",
                     url: "#Trouble",
                 },
                 {
+                    class:"Ex",
                     title: "Experience",
                     url: "#Experience",
                 },
                 {
+                    class:"Tn",
                     title: "Technology",
                     url: "#Technology",
                 },
                 {
+                    class:"De",
                     title: "Detail",
                     url: "#Detail",
                 },
                 {
+                    class:"Mo",
                     title: "MORE",
                     url: "#MORE",
                 },
@@ -68,54 +60,103 @@ export default {
 }
 </script>
 <style lang="scss">
-.header{
-    #header{
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 10000;
-        background-color:#282828a4;
-        .header__inner{
-            margin: 0 13rem;
-            gap: 10rem;
-            display: flex;
-            justify-content: space-between;
-            .header__logo{
-                img{
-                    width: 50%;
-                }
-            }
-            .header_menu1{
-                width: auto;
-                gap: 3rem;
-                display: flex;
-                align-items: center;
-                .header_menu1ul{
-                    display: flex;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    .header_menu1li{
-                        color: white;
-                        list-style: none;
-                        .header_menu1a{
-                            font-size: 1.3rem;
-                            text-decoration: none;
-                            color: white;
-                        }
-                        .header_menu1a:hover{
-                            color: #4DC0C8;
-                        }
-                    }
-                }
-            }
-            .header__nav__mobile{
-                display: none;
-            }
-        }
-    }
+.floating-menu{
+    z-index: 50;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: orange;
+	position: fixed;
+	bottom: 35px;
+	right: 35px;
+	input{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		margin: 0;
+		opacity: 0;
+		cursor: pointer;
+		&:checked{
+			& ~ .plus-icon{
+				transform: rotate(135deg);
+			}
+			& ~ .floating-nav{
+				li{
+					&:nth-child(6){
+						transform: translatey(-48px);
+					}
+					&:nth-child(5){
+						transform: translatey(-88px);
+					}
+					&:nth-child(4){
+						transform: translatey(-128px);
+					}
+					&:nth-child(3){
+						transform: translatey(-168px);
+					}
+					&:nth-child(2){
+						transform: translatey(-208px);
+					}
+					&:nth-child(1){
+						transform: translatey(-248px);
+					}
+				}
+			}
+		}
+		& ~ .plus-icon{
+			transform: rotate(0);
+		}
+	}
+	& > .plus-icon{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+		line-height: 1;
+		color: #FFFFFF;
+		background: #4DC0C8;
         
+		border-radius: 50%;
+		transform: rotate(0);
+		transition: all 0.5s ease;
+		pointer-events: none;
+		position: absolute;
+		box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2); 
+	}
+	& > .floating-nav{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		li{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background: #4DC0C8;
+			cursor: pointer;
+			position: absolute;
+			transition: all 0.5s ease;
+			a{
+                text-decoration: none;
+				font-size: 14px;
+				line-height: 1;
+				color: #ffffff;
+			}
+		}
+	}
 }
+
 @media (max-width: 1024px){
     .header{
         #header{
@@ -136,7 +177,7 @@ export default {
     .header{
         #header{
             .header__inner{
-                margin:0 5rem;
+                margin:0rem;
                 gap: 0rem;
                 .header__logo{
                     img{
@@ -160,7 +201,7 @@ export default {
                     display: block;
                     position: relative;
                     top: 25px;
-                    left: 30px;
+                    left: -25px;
                     z-index: 1;
                     user-select: none;
                     input{

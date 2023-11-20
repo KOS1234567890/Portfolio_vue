@@ -7,7 +7,11 @@
             <nav class="header_menu" role="navigation" aria-label="메인 메뉴">
                 <ul class="header_menuul">
                     <li class="header_menuli" v-for="(nav, key) in headerNav" :key="key">
-                        <a class="header_menua" :href="nav.url" @click="click_C(`${nav.tilte}`)">{{ nav.title }}</a>
+                        <a class="header_menua" 
+                        :href="nav.url"
+                        @click="click_C(`${nav.tilte}`)">
+                            {{ nav.title }}
+                        </a>
                     </li> 
                 </ul>
             </nav>
@@ -18,7 +22,11 @@
                 <span></span>
                 <ul id="menu1">
                     <li class="menuli" v-for="(nav, key) in headerNav" :key="key">
-                        <a :href="nav.url" @click="click_C(`${nav.tilte}`)">{{ nav.title }}</a>
+                        <a class="header_menua" 
+                        :href="nav.url"
+                        @click="click_C(`${nav.tilte}`)">
+                            {{ nav.title }}
+                        </a>
                     </li> 
                 </ul>
             </div>
@@ -32,23 +40,23 @@ export default {
             headerNav : [
                 {
                     title: "Main",
-                    url: "#Main",
+                    url: "/#Main",
                 },
                 {
                     title: "About",
-                    url: "#About",
+                    url: "/#About",
                 },
                 {
                     title: "Skill",
-                    url: "#Skill",
+                    url: "/#Skill",
                 },
                 {
                     title: "Portfolio",
-                    url: "#Portfolio",
+                    url: "/#Portfolio",
                 },
                 {
                     title: "Contact",
-                    url: "#Contact",
+                    url: "/#Contact",
                 },
             ]
         }
@@ -73,12 +81,13 @@ export default {
         z-index: 10000;
         background-color:#282828a4;
         .header__inner{
+            margin: 0 13rem ;
             gap: 10rem;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             .header__logo{
                 img{
-                    width: 80%;
+                    width: 60%;
                 }
             }
             .header_menu{
@@ -117,6 +126,7 @@ export default {
     .header{
         #header{
             .header__inner{
+                margin: 0 3rem ;
                 gap: 1rem;
                 .header__logo{
                     img{
@@ -133,6 +143,7 @@ export default {
     .header{
         #header{
             .header__inner{
+                margin: 0rem;
                 gap: 0rem;
                 .header__logo{
                     img{
@@ -154,8 +165,8 @@ export default {
                 #menuToggle{
                     display: block;
                     position: relative;
-                    top: 25px;
-                    left: 50px;
+                    top: 17px;
+                    left: 0px;
                     z-index: 1;
                     user-select: none;
                     input{
@@ -173,7 +184,7 @@ export default {
                         position: absolute;
                         width: 100%;
                         margin: -100px 0 0 -50px;
-                        padding:0 7rem 4rem 1rem;
+                        padding:7rem 9rem 2rem 1rem;
                         background: #ededed;
                         list-style-type: none;
                         transform-origin: 0% 0%;

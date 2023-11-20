@@ -130,23 +130,16 @@
 </template>
 <script>
 export default {
+    
   name: 'MySkill',
   data() {
     return {
-      t: 0,
+      DATA_COUNT: 7,
       totalMinwon: 100,
       showElement:false,
     };
   },
   mounted() {
-    if (this.$refs.bar) {
-        this.$refs.bar.style.width = '0';
-
-        const barAnimation = setInterval(() => {
-        this.$refs.bar.style.width = this.t + '%';
-        this.t++ >= this.totalMinwon && clearInterval(barAnimation);
-        }, 10);
-    }
     window.addEventListener('scroll',this.handleScroll);
     this.handleScroll();
   },
@@ -161,9 +154,23 @@ export default {
             }
 
             this.lastScrollPosition = scrollPosition;
-        }
-    }
-};
+        },
+    generateData() {
+      const generatedData = [];
+      for (let i = 0; i < this.chartData.labels.length; i++) {
+        generatedData.push(Math.floor(Math.random() * 100));
+      }
+      return generatedData;
+    },
+    randomizeData() {
+        this.chart.data.datasets.forEach(dataset => {
+            dataset.data = this.generateData();
+        });
+        this.chart.update();
+    },
+    
+}
+}
 </script>
 <style lang="scss">
 #Skill.show{
@@ -460,8 +467,16 @@ export default {
                         max-width: 100%;
                     }
                 }
+                .SkillGraph_ex{
+                    ul{
+                        li{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
                 .SkillGraph_exp{
                     ol{
+                        padding: 0;
                         margin-top: 8rem;
                         li{
                             font-size: .8rem;

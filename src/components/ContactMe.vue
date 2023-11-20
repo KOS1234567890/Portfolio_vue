@@ -5,17 +5,32 @@
         </div>
         <div class="contact_machine">
             <figure>
-                <img src="../../public/assets/icon/Tel.png" alt="">
+                <div class="Tel">
+                    <img src="../../public/assets/icon/Tel.png" alt="">
+                    <a href='tel:010-5878-8184' class="Tel_a">연락하기</a>
+                </div>
                 <figcaption>
                    <p><span>TEL)</span>02+</p>
-                   <p>010-5878-8184</p>
+                   <a>010-5878-8184</a>
                 </figcaption>
             </figure>
             <figure>
-                <img src="../../public/assets/icon/Email.png" alt="">
+                <div class="Email">
+                    <img src="../../public/assets/icon/Email.svg" alt="">
+                </div>
                 <figcaption>
                    <p><span>EMAIL)</span></p>
                    <p>fistar02@gmail.com</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <div class="QRcode">
+                    <img class="normal_kakao" src="../../public/assets/icon/kakao_QR.svg" alt="">
+                    <img class="rotate_kakao" src="../../public/assets/icon/QR.svg" alt="">
+                </div>
+                <figcaption>
+                   <p><span>Kakao)</span></p>
+                   <p>kakao_ID : fistar000.</p>
                 </figcaption>
             </figure>
         </div>
@@ -82,6 +97,47 @@ export default {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                .Tel{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img{
+                    }
+                    .Tel_a{
+                        text-decoration: none;
+                        transition: .5s;
+                        display: none;
+                        transform: translate(-50%,-50%);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                    }
+                }
+                .Tel:hover{
+                    img{
+                        transform: rotateY( 360deg );
+                        background-color: #4dc0c88c;
+                        border-radius: 50%;
+                    }
+                    .Tel_a{
+                        color: white;
+                        transition: 1s;
+                        display: block;
+                    }
+                }
+                img{
+                    transition: 1s;
+                    position: relative;
+                }
+                .Tel_p{
+                    position: absolute;
+                    top: 50%;
+                    left: 0%;
+                }
+                img:hover{
+                    transform: rotateY( 360deg );
+                }
                 figcaption{
                     margin-top: 3rem ;
                     text-align: center;
@@ -91,6 +147,32 @@ export default {
                         span{
                             color: #4DC0C8;
                     }}
+                    a{
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+                }
+                .Email{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .QRcode{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .rotate_kakao{
+                        transition: 1s;
+                        display: none;
+                    }
+                }
+                .QRcode:hover{
+                    .normal_kakao{
+                        display: none;
+                    }
+                    .rotate_kakao{
+                        display: block;
+                    }
                 }
             }
         }

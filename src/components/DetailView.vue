@@ -33,6 +33,7 @@
                         <p>{{project.Trouble.trcontents1[1]}}</p>
                     </div>
                 </li>
+
                 <li>
                     <img src="../../public/assets/common/EasyNetworks/warning2.png" alt="">
                     <div class="txtTS">
@@ -40,6 +41,7 @@
                         <p>{{project.Trouble.trcontents2[1]}}</p>
                     </div>
                 </li>
+
                 <li>
                     <img src="../../public/assets/common/EasyNetworks/warning3.png" alt="">
                     <div class="txtTS">
@@ -47,6 +49,7 @@
                         <p>{{project.Trouble.trcontents3[1]}}</p>
                     </div>
                 </li>
+                
             </ul>
         </section>
         <section id="Experience" ref="section2" class="Experience" :class="{'show':showElement[2]}">

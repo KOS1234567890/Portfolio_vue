@@ -2,6 +2,7 @@
     <div class="detailpage">
         <div class="header">
             <header_menu/>
+            <quick_menu/>
         </div>
         <detailpage/>
         <Morepage/>
@@ -10,13 +11,15 @@
 <script>
 import detailpage from '@/components/DetailView.vue';
 import Morepage from '@/components/MoreView.vue';
-import header_menu from '@/components/HeaderView.vue';
+import header_menu from '@/components/MainHeader.vue';
+import quick_menu from '@/components/HeaderView.vue';
 export default {
     name:"project-detail",
     components:{
         detailpage,
         Morepage,
         header_menu,
+        quick_menu,
     },
 }
 </script>

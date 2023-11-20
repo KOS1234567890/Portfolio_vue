@@ -2,8 +2,7 @@
     <section id="About" class="AboutMeContents" :class="{'show':showElement}">
         <div class="txtbox1">
             <b>About <span>Me</span></b>
-            <p class="Aboutmep">저는 웹 개발 분야에서 활동하고 있는 웹퍼블리셔이자 프론트엔드 개발자로, 사용자들에게 편리하고 매력적인 웹 경험을 제공하는 것을 즐깁니다.</p>
-            <p class="Aboutmep">프론트엔드에게 필요한 프레임워크를 학습하고 평소 쉴땐 개인블로그를 개발합니다. 그리고 보통 등산과 사진을 촬영하면서 휴식을 즐깁니다.</p>
+            <p class="Aboutmep">웹퍼블리셔이자 프론트엔드 개발자로서, 사용자들에게 편리하고 매력적인 웹 경험을 제공하는 것을 즐겨합니다. 프론트엔드 프레임워크를 학습하는 것에 열중하고, 일상에서는 음악을 듣거나 자연 속에서 활동함으로써 마음을 정화하고 에너지를 충전하는 시간을 가지고 사진 촬영을 즐기며 휴식을 취합니다. 이런 취미와 관심사는 업무에 새로운 아이디어와 창의성을 불어넣어줄 것 같아요!</p>
         </div>
         
         <ul class="About_ul">
@@ -67,8 +66,7 @@ export default {
     opacity: 0;
     transform: translateY(-10%);
     transition: opacity 0.8s, transform 0.8s;
-
-    padding: 5rem 0;
+    padding-top: 5rem;
     .txtbox1{
         b{
             color:#ffffff;
