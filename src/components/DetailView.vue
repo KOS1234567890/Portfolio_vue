@@ -222,7 +222,7 @@ export default {
             padding: 5rem 0;
         }
         .WhyChoice{
-            margin: 10rem 0;
+            margin: 0rem 0;
             b{ 
                 font-size: 5.625rem;
                 span{color: #4DC0C8;}
