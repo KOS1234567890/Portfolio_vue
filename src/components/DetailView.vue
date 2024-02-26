@@ -101,6 +101,7 @@
             <div class="detail_content">
                 <img src="../../public/assets/common/EasyNetworks/Detail.png" alt="">
                 <p>Domain : <a :href="`${project.Detail[1].content[0]}`" target="_blank">{{project.Detail[1].content[0]}}</a> </p>
+                <p>Git-address : <a :href="`${project.Detail[1].content[4]}`" target="_blank">{{project.Detail[1].content[4]}}</a></p>
                 <p>Category :{{project.Detail[1].content[1]}}</p>
                 <p>Period :{{project.Detail[1].content[2]}}</p>
                 <p>Classification :{{project.Detail[1].content[3]}}</p>

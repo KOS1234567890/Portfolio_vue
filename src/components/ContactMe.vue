@@ -225,7 +225,7 @@ export default {
                         padding: 1rem 0;
                         color: #ffffff;
                         font-size: 1.5rem;
-                        width:30%;
+                        width:50%;
                         margin-bottom: 1rem;
                         background-color: #4dc0c800;
                         border-radius: 3rem;
@@ -240,8 +240,12 @@ export default {
                         text-align: center;
                         border-radius: 3rem;
                         font-size: 1.5rem;
-                        width: 80%;
+                        width: 50%;
                         height: 10rem;
+                        
+                    }
+                    textarea::-webkit-scrollbar{
+                        /* 스크롤바 전체 */
                     }
                     .send_mail{
                         margin-top: 1rem;

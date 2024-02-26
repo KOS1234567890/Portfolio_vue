@@ -15,7 +15,7 @@
             "Detail":[
                 " ㈜이지네트웍스는 전문적인 종합렌탈 서비스를 제공하는 이지렌탈 사업부와공간별 맞춤형 공기정화기와 필터 등의 공기질 관리 제품을 개발, 생산하는 에코버 사업부가 있습니다.지속가능한 사회적 가치 창출과 고객과의 신뢰 관계 발전을 추구합니다.",
                 {
-                    "content":[" https://kos1234567890.github.io/Person_projecet1/"," Website"," 1개월"," 반응형웹"],
+                    "content":[" https://kos1234567890.github.io/Person_projecet1/"," Website"," 1개월"," 반응형웹","https://github.com/KOS1234567890/Person_projecet1"],
                     "content_img":["easyproduction1.png","easyproduction2.png"]
                 }
             ]
@@ -35,7 +35,7 @@
             "Detail":[
                 " 세종문화회관은 서울특별시가 설립한 기관으로 서울의 대표적인 문화예술기관입니다. 1978년 준공, 1999년 재단법인으로 재 탄생하여 한국 공연 문화의 산실이자 서울시공연예술의 허브역할을 다하고 있습니다.",
                 {
-                    "content":["https://kos1234567890.github.io/SeJongPage/"," Website","1개월","반응형웹"],
+                    "content":["https://kos1234567890.github.io/SeJongPage/"," Website","1개월","반응형웹","https://github.com/KOS1234567890/SeJongPage"],
                     "content_img":["SeJongPageMain.png","SeJongPage_season.png"]
                 }
             ]
@@ -55,7 +55,7 @@
             "Detail":[
                 " OMGfood 는 요리 과정과 재료에 대한 지침을 제공하는 문서 또는 정보의 모음입니다. 레시피는 특정 요리를 만들 때 필요한 단계별 지침과 사용해야 하는 재료를 포함하며, 종종 요리 시간, 난이도 및 칼로리 정보와 함께 제공됩니다.",
                 {
-                    "content":["https://kos1234567890.github.io/omgfood/","App","Period : 1개월","Classification : 반응형App"],
+                    "content":["https://kos1234567890.github.io/omgfood/","App","Period : 1개월","Classification : 반응형App","https://github.com/KOS1234567890/omgfood"],
                     "content_img":["omgfoodMain.png","omgfood_detail.png"]
                 }
             ]
@@ -75,7 +75,7 @@
             "Detail":[
                 " 팀 프로젝트로 진행한 제주도 사용자 맞춤 여행지 추천 서비스 어플 제제픽입니다. 성향테스트를 통해 제주도 관광지를 추천받고 추천받은 관광지를 토대로 코스를 기획할 수 있는 어플입니다.",
                 {
-                    "content":["https://jeje-pick.vercel.app/"," App"," 1개월","반응형App"],
+                    "content":["https://jeje-pick.vercel.app/"," App"," 1개월","반응형App","https://github.com/KOS1234567890/JEJUDO_PICK"],
                     "content_img":["jejepickmain.png","coursemap.png"]
                 }
             ]
