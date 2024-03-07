@@ -2,7 +2,7 @@
 지금까지 제작한 포트폴리오들을 모아놓은 사이트 입니다.
 이 사이트는 vue.js로 제작되었습니다.
 
-<img src="./public/asset/popolmain.png" alt="포폴 메인 사진"/>
+<img src="./public/assets/popolmain.png" alt="포폴 메인 사진"/>
 
 # 최근 업데이트 목록 (ver 1.0.2 / 2024.03.07)
 - README.md 업데이트 
