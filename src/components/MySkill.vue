@@ -265,13 +265,12 @@ export default {
     }
     .border_skill{
         background-color: #303030;
-        padding: 10rem ;
+        padding: 5rem 0;
         margin-top: 3rem;
         font-size: 1.5rem;
         .SkillGraph_img{
             display: flex;
             justify-content: space-around;
-            gap: 5rem;
             img{
                 max-width: 50%;
             }
@@ -380,6 +379,7 @@ export default {
             ol{
                 margin-top: 8rem;
                 li{
+                    font-size: large;
                     margin-top: .5rem;
                     list-style: none;
                     color: #ffffff;
