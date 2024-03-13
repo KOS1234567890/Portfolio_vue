@@ -4,7 +4,7 @@
 
 <img src="./public/assets/popolmain.png" alt="포폴 메인 사진"/>
 
-# 최근 업데이트 목록 (ver 1.0.2 / 2024.03.07)
+## 최근 업데이트 목록 (ver 1.0.2 / 2024.03.07)
 - README.md 업데이트 
 
 ## 제작자
