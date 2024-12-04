@@ -34,7 +34,11 @@ export default {
     
     p{
       font-size: 6.25rem;
+      font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: normal;
       color: #ffffff;
+        line-height: 1;
       span{
         font-weight: 700;
         color: #4DC0C8;
